@@ -86,8 +86,8 @@ body {
     text-align: center;
     color: #0000FF; 
     
-    /* גודל גופן יחסי (font-size) צריך להיות קטן יותר עכשיו: */
-    font-size: 5vw; 
+    /* *** שינוי גודל הגופן ל-3.5vw *** */
+    font-size: 3.5vw; 
     font-weight: 900;
     font-family: monospace; 
     overflow: hidden; 
