@@ -86,8 +86,8 @@ body {
     text-align: center;
     color: #0000FF; 
     
-    /* *** שינוי גודל הגופן ל-3.5vw *** */
-    font-size: 3.5vw; 
+    /* *** שינוי גודל הגופן ל-3.5vmin (יחסי לממד הקטן של המסך, יציב יותר) *** */
+    font-size: 3.5vmin; 
     font-weight: 900;
     font-family: monospace; 
     overflow: hidden; 
