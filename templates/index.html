@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="he" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>שעון הזמן הייחודי</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+    
+    <div id="image-container">
+        <div id="year-text-layer" class="fill-layer">טוען...</div> 
+        
+        <img id="month-fill-layer" class="fill-image-layer" src="" alt="חודש ייחודי">
+        <img id="day-fill-layer" class="fill-image-layer" src="" alt="יום ייחודי">
+        
+        <img id="hour-layer" class="main-layer" src="" alt="שכבת שעה">
+        <img id="minute-layer" class="main-layer" src="" alt="שכבת דקה">
+        <img id="second-layer" class="main-layer" src="" alt="שכבת שנייה"> 
+    </div>
+
+    <script src="{{ url_for('static', filename='script.js') }}"></script>
+</body>
+</html>
