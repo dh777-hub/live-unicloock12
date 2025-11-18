@@ -16,8 +16,8 @@ body {
     position: relative;
     /* VMIN = גודל יחסי לממד הקטן ביותר במסך (הגובה או הרוחב) */
     /* זה מבטיח שהשעון יישאר ריבוע וימלא 95% מהמסך ללא גלישה. */
-    height: 95vmin; 
-    width: 95vmin;   
+    height: 90vmin; 
+    width: 45vmin;   
     margin: 0; 
 }
 
