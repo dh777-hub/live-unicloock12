@@ -1,0 +1,85 @@
+body {
+    background-color: white; 
+    margin: 0;
+    padding: 0;
+    /* מרכוז אופקי ואנכי */
+    display: flex;
+    justify-content: center; 
+    align-items: center; 
+    /* מחזיר את גובה המסך המלא */
+    min-height: 100vh;
+    overflow: hidden; /* מונע גלילה מיותרת */
+}
+
+#image-container {
+    /* *** רספונסיביות מרובעת יציבה באמצעות אחוזים יחסיים (vmin) *** */
+    position: relative;
+    /* VMIN = גודל יחסי לממד הקטן ביותר במסך (הגובה או הרוחב) */
+    /* זה מבטיח שהשעון יישאר ריבוע וימלא 95% מהמסך ללא גלישה. */
+    height: 95vmin; 
+    width: 95vmin;   
+    margin: 0; 
+}
+
+/* הגדרות כלליות לשכבות התמונה (ממלאות את הקונטיינר הרספונסיבי) */
+.main-layer {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+}
+
+/* -------------------------------------- */
+/* הגדרת סדר השכבות (Z-INDEX) */
+/* -------------------------------------- */
+#second-layer { z-index: 10; } 
+#minute-layer { z-index: 20; }
+#hour-layer   { z-index: 30; } 
+
+/* -------------------------------------- */
+/* שכבות המילוי (יום וחודש) - מיקום רספונסיבי */
+/* -------------------------------------- */
+
+/* 1. מילוי יום ייחודי (פינה שמאלית עליונה) */
+#day-fill-layer {
+    position: absolute; 
+    z-index: 50; 
+    top: 0.4%;       
+    left: 5%;        
+    width: 20.14%;   
+    height: auto;    
+}
+
+/* 2. מילוי חודש ייחודי (פינה ימנית עליונה) */
+#month-fill-layer {
+    position: absolute; 
+    z-index: 50;
+    top: 0.4%;      
+    right: 5%;      
+    width: 20.14%;  
+    height: auto; 
+}
+
+/* 3. מילוי טקסט השנה (תחתון) */
+#year-text-layer {
+    position: absolute;
+    z-index: 20;
+    bottom: 0; 
+    left: 0;
+    width: 100%;
+    height: 15%; 
+    
+    /* הגדרות הטקסט */
+    text-align: center;
+    color: #0000FF; 
+    
+    /* גודל גופן יחסי לרוחב המסך (vw) */
+    font-size: 5vw; 
+    font-weight: 900;
+    font-family: monospace; 
+    overflow: hidden; 
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
